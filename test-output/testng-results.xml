@@ -1,41 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Validating ---> actual: Insurance designed with you in mind*** Expected: Insurance designed with you in mind<br>]]>
+      <![CDATA[Validation non functional<br>]]>
     </line>
     <line>
-      <![CDATA[[[ChromeDriver: chrome on WINDOWS (b568aa4e7f761f502040d6e27b9853f6)] -> xpath: //button[contains(text(),'Start a New Quote')]] ----> has been clicked<br>]]>
+      <![CDATA[Validation non functional<br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-02-23T21:32:23 GMT-05:00" name="Default suite" finished-at="2023-02-23T21:32:28 GMT-05:00" duration-ms="4603">
+  <suite started-at="2023-02-27T14:47:30 GMT-05:00" name="Suite" finished-at="2023-02-27T14:47:40 GMT-05:00" duration-ms="9763">
     <groups>
+      <group name="non-functional">
+        <method signature="AutoQuote.nonFunctionalTest()[pri:2, instance:test.auto.AutoQuote@1151e434]" name="nonFunctionalTest" class="test.auto.AutoQuote"/>
+        <method signature="HomeQuoteTest.nonFunctionalTest()[pri:2, instance:test.home.HomeQuoteTest@13e344d]" name="nonFunctionalTest" class="test.home.HomeQuoteTest"/>
+      </group> <!-- non-functional -->
     </groups>
-    <test started-at="2023-02-23T21:32:23 GMT-05:00" name="Default test" finished-at="2023-02-23T21:32:28 GMT-05:00" duration-ms="4603">
-      <class name="test.auto.AutoQuote">
-        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:test.auto.AutoQuote@4d154ccd]" started-at="2023-02-23T21:32:23 GMT-05:00" name="setUpSuite" finished-at="2023-02-23T21:32:23 GMT-05:00" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpSuite -->
-        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.auto.AutoQuote@4d154ccd]" started-at="2023-02-23T21:32:23 GMT-05:00" name="setUpBrowser" finished-at="2023-02-23T21:32:27 GMT-05:00" duration-ms="3829" status="PASS">
+    <test started-at="2023-02-27T14:47:30 GMT-05:00" name="Test" finished-at="2023-02-27T14:47:40 GMT-05:00" duration-ms="9763">
+      <class name="test.home.HomeQuoteTest">
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.home.HomeQuoteTest@13e344d]" started-at="2023-02-27T14:47:36 GMT-05:00" name="setUpBrowser" finished-at="2023-02-27T14:47:39 GMT-05:00" duration-ms="2753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method signature="autoTest()[pri:0, instance:test.auto.AutoQuote@4d154ccd]" started-at="2023-02-23T21:32:27 GMT-05:00" name="autoTest" finished-at="2023-02-23T21:32:27 GMT-05:00" duration-ms="303" status="PASS">
+        <test-method signature="nonFunctionalTest()[pri:2, instance:test.home.HomeQuoteTest@13e344d]" started-at="2023-02-27T14:47:39 GMT-05:00" name="nonFunctionalTest" finished-at="2023-02-27T14:47:39 GMT-05:00" duration-ms="7" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Validating ---> actual: Insurance designed with you in mind*** Expected: Insurance designed with you in mind<br>]]>
-            </line>
-            <line>
-              <![CDATA[[[ChromeDriver: chrome on WINDOWS (b568aa4e7f761f502040d6e27b9853f6)] -> xpath: //button[contains(text(),'Start a New Quote')]] ----> has been clicked<br>]]>
+              <![CDATA[Validation non functional<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- autoTest -->
-        <test-method is-config="true" signature="closingWindows()[pri:0, instance:test.auto.AutoQuote@4d154ccd]" started-at="2023-02-23T21:32:27 GMT-05:00" name="closingWindows" finished-at="2023-02-23T21:32:28 GMT-05:00" duration-ms="439" status="PASS">
+        </test-method> <!-- nonFunctionalTest -->
+        <test-method is-config="true" signature="closingWindows()[pri:0, instance:test.home.HomeQuoteTest@13e344d]" started-at="2023-02-27T14:47:39 GMT-05:00" name="closingWindows" finished-at="2023-02-27T14:47:40 GMT-05:00" duration-ms="456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingWindows -->
+      </class> <!-- test.home.HomeQuoteTest -->
+      <class name="test.auto.AutoQuote">
+        <test-method is-config="true" signature="setUpBrowser()[pri:0, instance:test.auto.AutoQuote@1151e434]" started-at="2023-02-27T14:47:30 GMT-05:00" name="setUpBrowser" finished-at="2023-02-27T14:47:36 GMT-05:00" duration-ms="5975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBrowser -->
+        <test-method signature="nonFunctionalTest()[pri:2, instance:test.auto.AutoQuote@1151e434]" started-at="2023-02-27T14:47:36 GMT-05:00" name="nonFunctionalTest" finished-at="2023-02-27T14:47:36 GMT-05:00" duration-ms="15" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Validation non functional<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- nonFunctionalTest -->
+        <test-method is-config="true" signature="closingWindows()[pri:0, instance:test.auto.AutoQuote@1151e434]" started-at="2023-02-27T14:47:36 GMT-05:00" name="closingWindows" finished-at="2023-02-27T14:47:36 GMT-05:00" duration-ms="505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closingWindows -->
       </class> <!-- test.auto.AutoQuote -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

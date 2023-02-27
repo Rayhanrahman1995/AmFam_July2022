@@ -19,5 +19,8 @@ public class CommonActions {
 		Assert.assertEquals(actual, expected);
 	}
 	
-	
+	public static void insert(WebElement element, String value) {
+		element.sendKeys(value);
+		Logs.log(value + " --> This value has been passed into -->"+element);
+	}
 }

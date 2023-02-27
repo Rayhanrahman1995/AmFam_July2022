@@ -7,10 +7,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import static com.utils.IConstant.*;
 import java.time.Duration;
-
+import com.objects.AddressPage;
+import com.objects.GetAQuotePage;
 import com.objects.LandingPage;
 import com.utils.ReadProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -19,12 +19,10 @@ public class BaseClass {
 
 	protected WebDriver driver;
 	protected LandingPage landingPage;
-	ReadProperties readProperties;
+	protected GetAQuotePage getAQuotePage;
+	protected AddressPage addressPage;
+	ReadProperties readProperties=new ReadProperties();
 	
-	@BeforeSuite
-	public void setUpSuite() {
-		readProperties=new ReadProperties();
-	}
 	
 	@BeforeMethod
 	public void setUpBrowser() {
@@ -44,6 +42,8 @@ public class BaseClass {
 	
 	private void initClasses(WebDriver driver) {
 		landingPage=new LandingPage(driver);
+		getAQuotePage=new GetAQuotePage(driver);
+		addressPage=new AddressPage(driver);
 	}
 	
 	private void initDriver(String driverName) {
