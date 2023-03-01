@@ -5,17 +5,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import static com.utils.IConstant.*;
+import java.lang.reflect.Method;
 import java.time.Duration;
+import com.aventstack.extentreports.Status;
 import com.objects.AddressPage;
 import com.objects.GetAQuotePage;
 import com.objects.LandingPage;
 import com.utils.ReadProperties;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseClass {
+public class BaseClass extends ExtentListner{
 
 	protected WebDriver driver;
 	protected LandingPage landingPage;
@@ -24,9 +28,10 @@ public class BaseClass {
 	ReadProperties readProperties=new ReadProperties();
 	
 	
+	@Parameters("browser")
 	@BeforeMethod
-	public void setUpBrowser() {
-	String browser=readProperties.getProperty(BROWSER);
+	public void setUpBrowser(String browser) {
+	//String browser=readProperties.getProperty(BROWSER);
 	String url=readProperties.getProperty(URL);
     long pageloadWait=readProperties.getWaitProperty(PAGELOAD_WAIT);
     long explicitlyWait=readProperties.getWaitProperty(EXPLICITLY_WAIT);
@@ -71,16 +76,27 @@ public class BaseClass {
 		}
 	}
 	
-	public WebDriver getDriver() {
-		return driver;
+	@AfterMethod
+	public void getResults(ITestResult result, Method method) {
+		if(result.getStatus() == ITestResult.SUCCESS) {
+			test.log(Status.PASS, PASSED);
+		}else if (result.getStatus() == ITestResult.FAILURE) {
+			test.log(Status.FAIL, FAILED);
+			test.addScreenCaptureFromPath(captureScreenShot(driver,method.getName()));
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			test.log(Status.SKIP, SKIPPED);
+		}
+		
 	}
 	
 	@AfterMethod
-	public void closingWindows() {
+	protected void tearUp() {
 		driver.quit();
 	}
 	
 	
-	
+	public WebDriver getDriver() {
+		return driver;
+	}
 	
 }
