@@ -2,14 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="test.home.HomeQuoteTest">
+      <class name="test.auto.AutoQuote">
         <methods>
-          <include name="homeQuoteTest"/>
+          <include name="closeReport"/>
+          <include name="startExtentReport"/>
+          <include name="autoTest1"/>
+          <include name="initExtenReport"/>
+          <include name="tearUp"/>
           <include name="setUpBrowser"/>
-          <include name="closingWindows"/>
+          <include name="getResults"/>
         </methods>
-      </class> <!-- test.home.HomeQuoteTest -->
+      </class> <!-- test.auto.AutoQuote -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

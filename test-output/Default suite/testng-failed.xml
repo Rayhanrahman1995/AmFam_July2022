@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.auto.AutoQuote">
+      <class name="test.Units.UnitTests">
         <methods>
-          <include name="autoTest"/>
-          <include name="setUpSuite"/>
-          <include name="setUpBrowser"/>
-          <include name="closingWindows"/>
+          <include name="unitTestForPojo"/>
         </methods>
-      </class> <!-- test.auto.AutoQuote -->
+      </class> <!-- test.Units.UnitTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

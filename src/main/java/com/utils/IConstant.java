@@ -14,7 +14,9 @@ public interface IConstant {
 	String IMPLICITLY_WAIT="implicitlyWait";
 	String EXPLICITLY_WAIT="explicitlyWait";
 	
-	
+	String PASSED="Test Passed";
+	String FAILED="Test Failed";
+	String SKIPPED="Test Skipped";
 	
 	
 }

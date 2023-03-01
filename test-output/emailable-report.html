@@ -9,11 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">9,763</td><td></td><td>auto, home</td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,029</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test.auto.AutoQuote</td><td><a href="#m0">nonFunctionalTest</a></td><td rowspan="1">1677527256395</td><td rowspan="1">15</td></tr><tr class="passedodd"><td rowspan="1">test.home.HomeQuoteTest</td><td><a href="#m1">nonFunctionalTest</a></td><td rowspan="1">1677527259682</td><td rowspan="1">7</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">test.auto.AutoQuote</td><td><a href="#m0">autoTest1</a></td><td rowspan="1">1677645799706</td><td rowspan="1">712</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">test.auto.AutoQuote#nonFunctionalTest</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Validation non functional<br></div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">test.home.HomeQuoteTest#nonFunctionalTest</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Validation non functional<br></div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">test.auto.AutoQuote#autoTest1</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Validating ---> actual: Insurance designed with you in mind*** Expected: Insurance designed with you in mind<br><br/>[[ChromeDriver: chrome on WINDOWS (96ce61cef55c82acdca656fdfcbe9cd8)] -> xpath: //button[contains(text(),'Start a New Quote')]] ----> has been clicked<br><br/>54115 --> This value has been passed into -->[[ChromeDriver: chrome on WINDOWS (96ce61cef55c82acdca656fdfcbe9cd8)] -> xpath: //input[@id='uid_60']]<br><br/>[[ChromeDriver: chrome on WINDOWS (96ce61cef55c82acdca656fdfcbe9cd8)] -> xpath: //div[@value='Car']] ----> has been clicked<br><br/>[[ChromeDriver: chrome on WINDOWS (96ce61cef55c82acdca656fdfcbe9cd8)] -> class name: LoadingButton__content] ----> has been clicked<br></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: null
+	at test.auto.AutoQuote.autoTest1(AutoQuote.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
